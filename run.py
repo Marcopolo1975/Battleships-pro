@@ -2,7 +2,7 @@
 import random
 
 
-   # Function for welcome message
+# Function for welcome message
     
 def start():
    
@@ -42,7 +42,7 @@ def place_ships(grid, num_ships):
             grid[x][y] = 'S'
             ships_placed += 1
 
-    # function to display grid on Game Board
+# function to display grid on Game Board
 def print_grid(grid):
     size = len(grid)
     for row in grid:
@@ -60,4 +60,15 @@ def validate_input(guess, size):
     y = int(y)
     if x < 0 or x >= size or y < 0 or y >= size:
         return False
-    return True          
+    return True  
+
+# Function for checking if a ship is hit or miss
+def check_hit(grid, guess):
+    x = int(guess[0])
+    y = int(guess[1])
+    if grid[x][y] == 'S':
+        grid[x][y] = 'X'
+        return True
+    else:
+        grid[x][y] = 'M'
+        return False
