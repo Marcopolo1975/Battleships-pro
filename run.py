@@ -31,3 +31,15 @@ start()
 def create_grid(size):
     grid = [['O' for _ in range(size)] for _ in range(size)]
     return grid
+
+# function to add ships to the Grid
+
+def place_ships(grid, num_ships):
+    size = len(grid)
+    ships_placed = 0
+    while ships_placed < num_ships:
+        x = random.randint(0, size - 1)
+        y = random.randint(0, size - 1)
+        if grid[x][y] == 'O':
+            grid[x][y] = 'S'
+            ships_placed += 1
