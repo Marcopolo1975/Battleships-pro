@@ -77,4 +77,22 @@ def check_winner(grid):
     for row in grid:
         if 'S' in row:
             return False
-    return True        
+    return True 
+
+# main Gameplay function
+def play_battleship():
+    size = int(input("Enter the grid size: "))
+    num_ships = int(input("Enter the number of ships: "))
+
+    player_grid = create_grid(size)
+    computer_grid = create_grid(size)
+
+    place_ships(player_grid, num_ships)
+    place_ships(computer_grid, num_ships)
+
+    while True:
+        print("Player Grid:")
+        print_grid(player_grid)
+
+        print("Computer Grid:")
+        print_grid(computer_grid)           
