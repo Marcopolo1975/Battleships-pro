@@ -118,4 +118,13 @@ def play_battleship():
                 print("Oh no! The computer destroyed your fleet. You lose!")
                 break
         else:
-               print("The computer missed.")               
+               print("The computer missed.")  
+
+# start a new game function
+                
+    play_again = input("Do you want to play again? (yes/no): ")
+    if play_again.lower() == "yes":
+       play_battleship()
+
+# Start the game
+play_battleship()       
