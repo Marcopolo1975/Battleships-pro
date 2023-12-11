@@ -25,3 +25,9 @@ BBBBB   A     A   TT      TT    LLLLLL  EEEEE  SSSSS   HH   HH  III  P
 
 
 start()
+
+# Function to create the game grid
+
+def create_grid(size):
+    grid = [['O' for _ in range(size)] for _ in range(size)]
+    return grid
