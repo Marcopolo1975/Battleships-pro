@@ -27,13 +27,11 @@ BBBBB   A     A   TT      TT    LLLLLL  EEEEE  SSSSS   HH   HH  III  P
 start()
 
 # Function to create the game grid
-
 def create_grid(size):
     grid = [['O' for _ in range(size)] for _ in range(size)]
     return grid
 
 # function to add ships to the Grid
-
 def place_ships(grid, num_ships):
     size = len(grid)
     ships_placed = 0
@@ -43,3 +41,23 @@ def place_ships(grid, num_ships):
         if grid[x][y] == 'O':
             grid[x][y] = 'S'
             ships_placed += 1
+
+    # function to display grid on Game Board
+def print_grid(grid):
+    size = len(grid)
+    for row in grid:
+        print(' '.join(row))  
+
+#Function to validate user inputs 
+def validate_input(guess, size):
+    if len(guess) != 2:
+        return False
+    x = guess[0]
+    y = guess[1]
+    if not x.isdigit() or not y.isdigit():
+        return False
+    x = int(x)
+    y = int(y)
+    if x < 0 or x >= size or y < 0 or y >= size:
+        return False
+    return True          
