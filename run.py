@@ -95,4 +95,27 @@ def play_battleship():
         print_grid(player_grid)
 
         print("Computer Grid:")
-        print_grid(computer_grid)           
+        print_grid(computer_grid)   
+
+# Guess function to determin hit or miss a shot
+        guess =  (input("Enter coordinates (row and column): ").split())
+        if not validate_input(guess, size):
+            print("Invalid input. Please enter valid coordinates.")
+            continue
+
+        if check_hit(computer_grid, guess):
+            print("You hit a ship!")
+            if check_winner(computer_grid):
+                print("Congratulations! You destroyed the computer's fleet. You win!")
+                break
+        else:
+            print("You missed.")
+
+        computer_guess = (random.randint(0, size - 1), random.randint(0, size - 1))
+        if check_hit(player_grid, computer_guess):
+            print("The computer hit your ship!")
+            if check_winner(player_grid):
+                print("Oh no! The computer destroyed your fleet. You lose!")
+                break
+        else:
+               print("The computer missed.")               
