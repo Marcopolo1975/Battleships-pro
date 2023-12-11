@@ -72,3 +72,9 @@ def check_hit(grid, guess):
     else:
         grid[x][y] = 'M'
         return False
+# function to check the Winner
+def check_winner(grid):
+    for row in grid:
+        if 'S' in row:
+            return False
+    return True        
