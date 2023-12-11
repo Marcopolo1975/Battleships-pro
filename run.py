@@ -94,8 +94,8 @@ def play_battleship():
         print("Player Grid:")
         print_grid(player_grid)
 
-        print("Computer Grid:")
-        print_grid(computer_grid)   
+        #print("Computer Grid:")
+        #print_grid(computer_grid)   
 
 # Guess function to determin hit or miss a shot
         guess =  (input("Enter coordinates (row and column): ").split())
