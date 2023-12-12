@@ -105,12 +105,13 @@ def play_battleship():
         if check_hit(computer_grid, guess):
             print("You hit a ship!")
             if check_winner(computer_grid):
-                print("Congratulations! You destroyed the computer's fleet. You win!")
+                print("Great! You destroyed the computer's fleet. You win!")
                 break
         else:
             print("You missed.")
 
-        computer_guess = (random.randint(0, size - 1), random.randint(0, size - 1))
+        computer_guess = (random.randint(0, size - 1),
+                          random.randint(0, size - 1))
         if check_hit(player_grid, computer_guess):
             print("The computer hit your ship!")
             if check_winner(player_grid):
