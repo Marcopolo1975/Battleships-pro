@@ -4,15 +4,11 @@ Battleships Game
 # import Function
 import random
 
+
 # Function for welcome message
 def start():
     print('''
-                   __/___\_
-              _____/______\_____
-       ______/_____   _____\______\_____
-   __/_____/______\_/_______\_______\____\__
-  /_______________________________________\_
-  \_______________________________________/
+
 BBBBB      A    TTTTTT  TTTTTT  L       EEEEE   SSSSS  HH   HH  III  PPPP
 B    B    A A     TT      TT    L       E      S       HH   HH   I   P   P
 BBBBB    AAAAA    TT      TT    L       EEEE    SSSS   HHHHHHH   I   PPPP
@@ -21,10 +17,12 @@ BBBBB   A     A   TT      TT    LLLLLL  EEEEE  SSSSS   HH   HH  III  P
  ''')
     start()
 
+
 # Function to create the game grid
 def create_grid(size):
     grid = [['O' for _ in range(size)] for _ in range(size)]
     return grid
+
 
 # function to add ships to the Grid
 def place_ships(grid, num_ships):
@@ -37,13 +35,15 @@ def place_ships(grid, num_ships):
             grid[x][y] = 'S'
             ships_placed += 1
 
+
 # function to display grid on Game Board
 def print_grid(grid):
     size = len(grid)
     for row in grid:
-        print(' '.join(row))  
+        print(' '.join(row))
 
-#Function to validate user inputs 
+
+# Function to validate user inputs
 def validate_input(guess, size):
     if len(guess) != 2:
         return False
@@ -55,7 +55,8 @@ def validate_input(guess, size):
     y = int(y)
     if x < 0 or x >= size or y < 0 or y >= size:
         return False
-    return True  
+    return True
+
 
 # Function for checking if a ship is hit or miss
 def check_hit(grid, guess):
@@ -67,12 +68,15 @@ def check_hit(grid, guess):
     else:
         grid[x][y] = 'M'
         return False
+
+
 # function to check the Winner
 def check_winner(grid):
     for row in grid:
         if 'S' in row:
             return False
-    return True 
+    return True
+
 
 # main Gameplay function
 def play_battleship():
@@ -89,11 +93,11 @@ def play_battleship():
         print("Player Grid:")
         print_grid(player_grid)
 
-        #print("Computer Grid:")
-        #print_grid(computer_grid)   
+        # print("Computer Grid:")
+        # print_grid(computer_grid)
 
 # Guess function to determin hit or miss a shot
-        guess =  (input("Enter coordinates (row and column): ").split())
+        guess = (input("Enter coordinates (row and column): ").split())
         if not validate_input(guess, size):
             print("Invalid input. Please enter valid coordinates.")
             continue
@@ -113,13 +117,13 @@ def play_battleship():
                 print("Oh no! The computer destroyed your fleet. You lose!")
                 break
         else:
-               print("The computer missed.")  
+            print("The computer missed.")
 
 # start a new game function
-                
     play_again = input("Do you want to play again? (yes/no): ")
     if play_again.lower() == "yes":
-       play_battleship()
+        play_battleship()
+
 
 # Start the game
-       play_battleship()       
+play_battleship()
