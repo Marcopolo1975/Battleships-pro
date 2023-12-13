@@ -7,15 +7,18 @@ import random
 
 # Function for welcome message
 def start():
+   
     print('''
-
 BBBBB      A    TTTTTT  TTTTTT  L       EEEEE   SSSSS  HH   HH  III  PPPP
 B    B    A A     TT      TT    L       E      S       HH   HH   I   P   P
 BBBBB    AAAAA    TT      TT    L       EEEE    SSSS   HHHHHHH   I   PPPP
 B    B  A     A   TT      TT    L       E          S   HH   HH   I   P
 BBBBB   A     A   TT      TT    LLLLLL  EEEEE  SSSSS   HH   HH  III  P
- ''')
-    start()
+
+    ''')
+
+
+start()
 
 
 # Function to create the game grid
