@@ -9,11 +9,11 @@ import random
 def start():
 
     print('''
-BBBBB      A    TTTTTT  TTTTTT  L       EEEEE   SSSSS  HH   HH  III  PPPP    SSSSS
-B    B    A A     TT      TT    L       E      S       HH   HH   I   P   P  S
-BBBBB    AAAAA    TT      TT    L       EEEE    SSSS   HHHHHHH   I   PPPP    SSSS
-B    B  A     A   TT      TT    L       E          S   HH   HH   I   P          S
-BBBBB   A     A   TT      TT    LLLLLL  EEEEE  SSSSS   HH   HH  III  P      SSSSS
+BBBBB      A     TTTTT   TTTTT  L       EEEE   SSSS    H   H  III  PPPP   SSSS
+B    B    A A      T       T    L       E      S       H   H   I   P   P  S
+BBBBB    AAAAA     T       T    L       EEE    SSSS    HHHHH   I   PPPP   SSSS
+B    B  A     A    T       T    L       E         S    H   H   I   P         S
+BBBBB   A     A    T       T    LLLL    EEEE   SSSS    H   H  III  P      SSSS
 
     ''')
 
