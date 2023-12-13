@@ -5,15 +5,15 @@ Battleships Game
 import random
 
 
-# Function for welcome message
+# Function for Game Logo
 def start():
-   
+
     print('''
-BBBBB      A    TTTTTT  TTTTTT  L       EEEEE   SSSSS  HH   HH  III  PPPP
-B    B    A A     TT      TT    L       E      S       HH   HH   I   P   P
-BBBBB    AAAAA    TT      TT    L       EEEE    SSSS   HHHHHHH   I   PPPP
-B    B  A     A   TT      TT    L       E          S   HH   HH   I   P
-BBBBB   A     A   TT      TT    LLLLLL  EEEEE  SSSSS   HH   HH  III  P
+BBBBB      A    TTTTTT  TTTTTT  L       EEEEE   SSSSS  HH   HH  III  PPPP    SSSSS
+B    B    A A     TT      TT    L       E      S       HH   HH   I   P   P  S
+BBBBB    AAAAA    TT      TT    L       EEEE    SSSS   HHHHHHH   I   PPPP    SSSS
+B    B  A     A   TT      TT    L       E          S   HH   HH   I   P          S
+BBBBB   A     A   TT      TT    LLLLLL  EEEEE  SSSSS   HH   HH  III  P      SSSSS
 
     ''')
 
