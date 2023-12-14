@@ -73,6 +73,9 @@ def play_battleship():
 
  # Game main function
     while True:
+        print("\nPlayer's grid and ships:")
+        print("Player's ships: ", player_ships)
+        
         print("\nPlayer's turn:")
         print_grid(player_grid)
         player_guess_row = get_valid_input("Enter your guess for the row: ", grid_size)
@@ -108,9 +111,11 @@ def play_battleship():
 
 
 # start a new game function
-    play_again = input("Do you want to play again? (yes/no): ")
+    play_again = input("\nDo you want to play again? (yes/no): ")
     if play_again.lower() == "yes":
         play_battleship()
+    else:
+        print("Thank you for playing Battleship!")
 
 
 # Start the game
