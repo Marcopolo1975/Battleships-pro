@@ -71,56 +71,41 @@ def play_battleship():
                 computer_ships.add(computer_ship)
                 break
 
-
-# function to check the Winner
-def check_winner(grid):
-    for row in grid:
-        if 'S' in row:
-            return False
-    return True
-
-
-# main Gameplay function
-def play_battleship():
-    size = int(input("Enter the grid size: "))
-    num_ships = int(input("Enter the number of ships: "))
-
-    player_grid = create_grid(size)
-    computer_grid = create_grid(size)
-
-    place_ships(player_grid, num_ships)
-    place_ships(computer_grid, num_ships)
-
+ # Game main function
     while True:
-        print("Player Grid:")
+        print("\nPlayer's turn:")
         print_grid(player_grid)
+        player_guess_row = get_valid_input("Enter your guess for the row: ", grid_size)
+        player_guess_col = get_valid_input("Enter your guess for the column: ", grid_size)
+        player_guess = (player_guess_row, player_guess_col)
 
-        # print("Computer Grid:")
-        # print_grid(computer_grid)
-
-# Guess function to determin hit or miss a shot
-        guess = (input("Enter coordinates (row and column): ").split())
-        if not validate_input(guess, size):
-            print("Invalid input. Please enter valid coordinates.")
-            continue
-
-        if check_hit(computer_grid, guess):
-            print("You hit a ship!")
-            if check_winner(computer_grid):
-                print("Great! You destroyed the computer's fleet. You win!")
-                break
+        if player_guess in computer_ships:
+            print("welldone! You hit the computer's ship!")
+            computer_ships.remove(player_guess)
+            computer_grid[player_guess_row][player_guess_col] = "X"
         else:
-            print("You missed.")
+            print("Oops! You missed the computer's ship.")
+            computer_grid[player_guess_row][player_guess_col] = "-"
 
-        computer_guess = (random.randint(0, size - 1),
-                          random.randint(0, size - 1))
-        if check_hit(player_grid, computer_guess):
+        if not computer_ships:
+            print("\nGreat! You destroyed the computers Fleet. You win!")
+            break
+
+        print("\nComputer's turn:")
+        computer_guess = (random.randint(0, grid_size-1), random.randint(0, grid_size-1))
+
+        if computer_guess in player_ships:
             print("The computer hit your ship!")
-            if check_winner(player_grid):
-                print("Oh no! The computer destroyed your fleet. You lose!")
-                break
+            player_ships.remove(computer_guess)
+            player_grid[computer_guess[0]][computer_guess[1]] = "X"
         else:
-            print("The computer missed.")
+            print("The computer missed your ship.")
+            player_grid[computer_guess[0]][computer_guess[1]] = "-"
+
+        if not player_ships:
+            print("\nOh no! The computer destroyed your Fleet. You lose!")
+            break
+
 
 # start a new game function
     play_again = input("Do you want to play again? (yes/no): ")
