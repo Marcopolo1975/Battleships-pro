@@ -1,32 +1,70 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships PRO
 
-Welcome,
+Battleships Pro is a python terminal game, which runs in the mock terminal on Heroku
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+The live link can be found here [Battleships PRO]()
 
-## Reminders
+## How to Play
+- Battleship pro is based on the classic pen-and-paper game. You can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game))
+- this version is a single player game. player will play against Computer
+- On start player can set the grid size and number of ships
+- player can see his grid, Computer's grind is hidden
+- player have to make a guess where the opponent's ships are located on grid. if player guess right location of grid thats a hit, that means one of compter ships is destroyed
+- player's goal is to destroy computer's Fleet, same is the Goal of computer
+- Who destroyes the opponent's fleet first, is winner of the Game
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+![Responsice Mockup](assets/images/amiresponsive.png)
 
-## Creating the Heroku app
+## Features
+- User ability to set the size of Board and number of ships
+  - The Board of Computer is hidden so player cant see where the Computers Ships are located
+   
+![](assets/images/Screenshot1.png)
+- Play against the Computer
+- Accepts user inputs 
+- Invalid inputs are denied
+- Maintain user and computer scores
+![](assets/images/Screenshot2.png)
+- Input validation and error-checking
+  - User cannot enter coordinates outside the size of the grid
+  - User must enter numbers alphabets and all other characters are invalid
+### Features in planning
+  - player can postion ships themselves
+  - player can set the size of ships
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Testing 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+ The Project is tested manualy by following methods
+ - Tested through PEP8 linter there are no errors, only few long line warnings
+ - Tested by entering invalid numbers and strings and out of range numbers
+ - Tested in local terminal and the Code Institute Heroku terminal
 
-Connect your GitHub repository and deploy as normal.
+![](assets/images/lighthouse.png)
 
-## Constraints
+### Bugs
+- There were so many indentation errors, removed all errors one by one
+- The input validation Function was missing in Code, my Mentor mentioned that after testing. game keep crashing after invalid inputs. added code for input validation function, and limiting the size of board and number of ships, solved the Issue
+  
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
 
----
+## Deployment
 
-Happy coding!
+
+The live link can be found here [Battleships PRO]()
+
+
+## Credits 
+- Code Institute for the deployment terminal
+- Wikipedia for the details of the Battleship game
+
+### Content 
+
+- throughout the making, got a lots of guidance from [W3scools](https://www.w3schools.com/) and [youtube](https://www.youtube.com/) Tutorials 
+
+
+
+
+
+
