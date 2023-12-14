@@ -35,17 +35,17 @@ def print_grid(grid):
         print(" ".join(row))
 
 
-# function to add ships to the Grid
-def place_ships(grid, num_ships):
-    size = len(grid)
-    ships_placed = 0
-    while ships_placed < num_ships:
-        x = random.randint(0, size - 1)
-        y = random.randint(0, size - 1)
-        if grid[x][y] == 'O':
-            grid[x][y] = 'S'
-            ships_placed += 1
-
+# Function to validate user inputs
+def get_valid_input(message, max_value):
+    while True:
+        try:
+            guess = int(input(message))
+            if guess < 0 or guess >= max_value:
+                print("Invalid input! Please enter a number within the grid range.")
+            else:
+                return guess
+        except ValueError:
+            print("Invalid input! Please enter a number.")
 
 # function to display grid on Game Board
 def print_grid(grid):
