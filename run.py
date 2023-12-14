@@ -9,6 +9,7 @@ import random
 def start():
 
     print('''
+          
 BBBBB      A     TTTTT   TTTTT  L       EEEE   SSSS    H   H  III  PPPP   SSSS
 B    B    A A      T       T    L       E      S       H   H   I   P   P  S
 BBBBB    AAAAA     T       T    L       EEE    SSSS    HHHHH   I   PPPP   SSSS
@@ -21,10 +22,17 @@ BBBBB   A     A    T       T    LLLL    EEEE   SSSS    H   H  III  P      SSSS
 start()
 
 
-# Function to create the game grid
+# function to creat grid on Game Board
 def create_grid(size):
-    grid = [['O' for _ in range(size)] for _ in range(size)]
+    grid = []
+    for _ in range(size):
+        grid.append(["O"] * size)
     return grid
+
+
+def print_grid(grid):
+    for row in grid:
+        print(" ".join(row))
 
 
 # function to add ships to the Grid
