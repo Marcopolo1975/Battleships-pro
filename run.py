@@ -47,6 +47,7 @@ def get_valid_input(message, max_value):
         except ValueError:
             print("Invalid input! Please enter a number.")
 
+
 # Function for ability that the user can set the grid size and number of ships
 def play_battleship():
     print("Let's play Battleship!")
@@ -57,17 +58,18 @@ def play_battleship():
     player_ships = set()
     computer_ships = set()
 
-
-# Function for checking if a ship is hit or miss
-def check_hit(grid, guess):
-    x = int(guess[0])
-    y = int(guess[1])
-    if grid[x][y] == 'S':
-        grid[x][y] = 'X'
-        return True
-    else:
-        grid[x][y] = 'M'
-        return False
+# Randomly place ships for the player and computer
+    for _ in range(num_ships):
+        while True:
+            player_ship = (random.randint(0, grid_size-1), random.randint(0, grid_size-1))
+            if player_ship not in player_ships:
+                player_ships.add(player_ship)
+                break
+        while True:
+            computer_ship = (random.randint(0, grid_size-1), random.randint(0, grid_size-1))
+            if computer_ship not in computer_ships and computer_ship not in player_ships:
+                computer_ships.add(computer_ship)
+                break
 
 
 # function to check the Winner
