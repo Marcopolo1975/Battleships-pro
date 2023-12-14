@@ -19,15 +19,18 @@ The live link can be found here [Battleships PRO]()
 - User ability to set the size of Board and number of ships
   - The Board of Computer is hidden so player cant see where the Computers Ships are located
    
-![](assets/images/Screenshot1.png)
+![game screenshot](Images/Screenshot1.png)
 - Play against the Computer
 - Accepts user inputs 
 - Invalid inputs are denied
 - Maintain user and computer scores
-![](assets/images/Screenshot2.png)
+
+![game screenshot](Images/Screenshot.png)
 - Input validation and error-checking
-  - User cannot enter coordinates outside the size of the grid
-  - User must enter numbers alphabets and all other characters are invalid
+- User cannot enter coordinates outside the size of the grid
+- User must enter numbers alphabets and all other characters are invalid
+
+![game screenshot](Images/Screenshot2.png)
 ### Features in planning
   - player can postion ships themselves
   - player can set the size of ships

@@ -106,7 +106,7 @@ def play_battleship():
             player_grid[computer_guess[0]][computer_guess[1]] = "-"
 
         if not player_ships:
-            print("\nOh no! The computer destroyed your Fleet. You lose!")
+            print("\nGame Over! The computer destroyed your Fleet. You lose!")
             break
 
 
