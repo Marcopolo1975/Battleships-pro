@@ -15,6 +15,20 @@ The live link can be found here [Battleships PRO]()
 
 ![Responsice Mockup](assets/images/amiresponsive.png)
 
+## User Stories
+
+- ### First Time User
+  - As a first time user I want to understand the Theory of the gamem,
+    as the game is based on the classic pen-and-paper game .
+  - As a first time user I want to learn Game Rules and be able to play the Game.
+
+- ### Returning user
+  - As a returning user I want to increase my playability.
+ 
+- ### Frequent user
+  - As a frequent user I want to be able to beat my previous score on the leaderboard.
+
+
 ## Features
 - User ability to set the size of Board and number of ships
   - The Board of Computer is hidden so player cant see where the Computers Ships are located
