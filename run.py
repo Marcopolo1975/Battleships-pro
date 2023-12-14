@@ -47,26 +47,15 @@ def get_valid_input(message, max_value):
         except ValueError:
             print("Invalid input! Please enter a number.")
 
-# function to display grid on Game Board
-def print_grid(grid):
-    size = len(grid)
-    for row in grid:
-        print(' '.join(row))
-
-
-# Function to validate user inputs
-def validate_input(guess, size):
-    if len(guess) != 2:
-        return False
-    x = guess[0]
-    y = guess[1]
-    if not x.isdigit() or not y.isdigit():
-        return False
-    x = int(x)
-    y = int(y)
-    if x < 0 or x >= size or y < 0 or y >= size:
-        return False
-    return True
+# Function for ability that the user can set the grid size and number of ships
+def play_battleship():
+    print("Let's play Battleship!")
+    grid_size = get_valid_input("Enter the grid size (maximum 10): ", 11)
+    num_ships = get_valid_input("Enter the number of ships (maximum 10): ", 11)
+    player_grid = create_grid(grid_size)
+    computer_grid = create_grid(grid_size)
+    player_ships = set()
+    computer_ships = set()
 
 
 # Function for checking if a ship is hit or miss
