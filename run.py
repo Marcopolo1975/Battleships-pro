@@ -87,6 +87,8 @@ def play_battleship():
             print("welldone! You hit the computer's ship!")
             computer_ships.remove(player_guess)
             computer_grid[player_guess_row][player_guess_col] = "X"
+        elif  computer_grid[player_guess_row][player_guess_col] == "M" or computer_grid[player_guess_row][player_guess_col] == "X":
+            print("You've already guessed this position. Try again.")    
         else:
             print("Oops! You missed the computer's ship.")
             computer_grid[player_guess_row][player_guess_col] = "-"
