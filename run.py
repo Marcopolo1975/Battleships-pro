@@ -51,8 +51,8 @@ def get_valid_input(message, max_value):
 # Function for ability that the user can set the grid size and number of ships
 def play_battleship():
     print("Let's play Battleship!")
-    grid_size = get_valid_input("Enter the grid size (maximum 10): ", 11)
-    num_ships = get_valid_input("Enter the number of ships (maximum 10): ", 11)
+    grid_size = get_valid_input("Enter the grid size (4-10): ",4, 10)
+    num_ships = get_valid_input("Enter the number of ships (4-10): ",4, 10)
     player_grid = create_grid(grid_size)
     computer_grid = create_grid(grid_size)
     player_ships = set()

@@ -15,18 +15,6 @@ The live link can be found here [Battleships PRO]()
 
 ![Responsice Mockup](assets/images/amiresponsive.png)
 
-## User Stories
-
-- ### First Time User
-  - As a first time user I want to understand the Theory of the gamem,
-    as the game is based on the classic pen-and-paper game .
-  - As a first time user I want to learn Game Rules and be able to play the Game.
-
-- ### Returning user
-  - As a returning user I want to increase my playability.
- 
-- ### Frequent user
-  - As a frequent user I want to be able to beat my previous score on the leaderboard.
 
 
 ## Features
@@ -49,6 +37,18 @@ The live link can be found here [Battleships PRO]()
   - player can postion ships themselves
   - player can set the size of ships
 
+## User Stories
+
+- ### First Time User
+  - As a first time user I want to understand the Theory of the gamem,
+    as the game is based on the classic pen-and-paper game .
+  - As a first time user I want to learn Game Rules and be able to play the Game.
+
+- ### Returning user
+  - As a returning user I want to increase my playability.
+ 
+- ### Frequent user
+  - As a frequent user I want to be able to beat my previous score on the leaderboard.
 
 
 ## Testing 
