@@ -51,8 +51,8 @@ def get_valid_input(message, min_value, max_value):
 # Function for ability that the user can set the grid size and number of ships
 def play_battleship():
     print("Let's play Battleship!")
-    grid_size = get_valid_input("Enter the grid size (4-10): ", 4, 10)
-    num_ships = get_valid_input("Enter the number of ships (4-10): ", 4, 10)
+    grid_size = get_valid_input("Enter the grid size (4-10):\n ", 4, 10)
+    num_ships = get_valid_input("Enter the number of ships (4-10):\n ", 4, 10)
     player_grid = create_grid(grid_size)
     computer_grid = create_grid(grid_size)
     player_ships = set()
@@ -78,8 +78,8 @@ def play_battleship():
 
         print("\nPlayer's turn:")
         print_grid(player_grid)
-        player_guess_row = get_valid_input("Enter guess row (1-{}): ".format(grid_size), 1, grid_size) - 1
-        player_guess_col = get_valid_input("Enter guess column (1-{}): ".format(grid_size), 1, grid_size) - 1
+        player_guess_row = get_valid_input("Enter guess row (1-{}):\n ".format(grid_size), 1, grid_size) - 1
+        player_guess_col = get_valid_input("Enter guess column (1-{}):\n ".format(grid_size), 1, grid_size) - 1
         player_guess = (player_guess_row, player_guess_col)
 
         if player_guess in computer_ships:
@@ -113,7 +113,7 @@ def play_battleship():
 
 
 # start a new game function
-    play_again = input("\nDo you want to play again? (yes/no): ")
+    play_again = input("\nDo you want to play again? (yes/no):\n ")
     if play_again.lower() == "yes":
         play_battleship()
     else:
