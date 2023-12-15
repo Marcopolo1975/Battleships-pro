@@ -9,7 +9,7 @@ import random
 def start():
 
     print('''
-          
+
 BBBBB      A     TTTTT   TTTTT  L       EEEE   SSSS    H   H  III  PPPP   SSSS
 B    B    A A      T       T    L       E      S       H   H   I   P   P  S
 BBBBB    AAAAA     T       T    L       EEE    SSSS    HHHHH   I   PPPP   SSSS
@@ -40,11 +40,10 @@ def get_valid_input(message, min_value, max_value):
     while True:
         try:
             guess = int(input(message))
-            #if min_value < 4 or guess >=  max_value:
             if min_value <= guess <= max_value:
-                return guess     
+                return guess
             else:
-                 print(f"Invalid input. Please enter a number between {min_value} and {max_value}.")                
+                print(f"Invalid input. Please enter a number between {min_value} and {max_value}.")
         except ValueError:
             print("Invalid input! Please enter a number.")
 
@@ -52,8 +51,8 @@ def get_valid_input(message, min_value, max_value):
 # Function for ability that the user can set the grid size and number of ships
 def play_battleship():
     print("Let's play Battleship!")
-    grid_size = get_valid_input("Enter the grid size (4-10): ",4, 10)
-    num_ships = get_valid_input("Enter the number of ships (4-10): ",4, 10)
+    grid_size = get_valid_input("Enter the grid size (4-10): ", 4, 10)
+    num_ships = get_valid_input("Enter the number of ships (4-10): ", 4, 10)
     player_grid = create_grid(grid_size)
     computer_grid = create_grid(grid_size)
     player_ships = set()
@@ -72,11 +71,11 @@ def play_battleship():
                 computer_ships.add(computer_ship)
                 break
 
- # Game main function
+# Game main function
     while True:
         print("\nPlayer's grid and ships:")
         print("Player's ships: ", player_ships)
-        
+
         print("\nPlayer's turn:")
         print_grid(player_grid)
         player_guess_row = get_valid_input("Enter guess row (1-{}): ".format(grid_size), 1, grid_size) - 1
@@ -87,8 +86,8 @@ def play_battleship():
             print("welldone! You hit the computer's ship!")
             computer_ships.remove(player_guess)
             computer_grid[player_guess_row][player_guess_col] = "X"
-        elif  computer_grid[player_guess_row][player_guess_col] == "M" or computer_grid[player_guess_row][player_guess_col] == "X":
-            print("You've already guessed this position. Try again.")    
+        elif computer_grid[player_guess_row][player_guess_col] == "M" or computer_grid[player_guess_row][player_guess_col] == "X":
+            print("You've already guessed this position. Try again.")
         else:
             print("Oops! You missed the computer's ship.")
             computer_grid[player_guess_row][player_guess_col] = "-"
