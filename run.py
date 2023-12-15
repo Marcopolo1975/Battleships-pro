@@ -90,7 +90,7 @@ def play_battleship():
             print("You've already guessed this position. Try again.")
         else:
             print("Oops! You missed the computer's ship.")
-            computer_grid[player_guess_row][player_guess_col] = "-"
+            computer_grid[player_guess_row][player_guess_col] = "M"
 
         if not computer_ships:
             print("\nGreat! You destroyed the computers Fleet. You win!")
@@ -105,7 +105,7 @@ def play_battleship():
             player_grid[computer_guess[0]][computer_guess[1]] = "X"
         else:
             print("The computer missed your ship.")
-            player_grid[computer_guess[0]][computer_guess[1]] = "-"
+            player_grid[computer_guess[0]][computer_guess[1]] = "M"
 
         if not player_ships:
             print("\nGame Over! The computer destroyed your Fleet. You lose!")
