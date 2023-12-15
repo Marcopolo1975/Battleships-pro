@@ -36,14 +36,15 @@ def print_grid(grid):
 
 
 # Function to validate user inputs
-def get_valid_input(message, max_value):
+def get_valid_input(message, min_value, max_value):
     while True:
         try:
             guess = int(input(message))
-            if guess < 0 or guess >= max_value:
-                print("Invalid input! Please enter a number within the grid range.")
+            #if min_value < 4 or guess >=  max_value:
+            if min_value <= guess <= max_value:
+                return guess     
             else:
-                return guess
+                 print(f"Invalid input. Please enter a number between {min_value} and {max_value}.")                
         except ValueError:
             print("Invalid input! Please enter a number.")
 
@@ -78,8 +79,8 @@ def play_battleship():
         
         print("\nPlayer's turn:")
         print_grid(player_grid)
-        player_guess_row = get_valid_input("Enter your guess for the row: ", grid_size)
-        player_guess_col = get_valid_input("Enter your guess for the column: ", grid_size)
+        player_guess_row = get_valid_input("Enter guess row (1-{}): ".format(grid_size), 1, grid_size) - 1
+        player_guess_col = get_valid_input("Enter guess column (1-{}): ".format(grid_size), 1, grid_size) - 1
         player_guess = (player_guess_row, player_guess_col)
 
         if player_guess in computer_ships:
