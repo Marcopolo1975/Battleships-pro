@@ -2,7 +2,7 @@
 
 Battleships Pro is a python terminal game, which runs in the mock terminal on Heroku
 
-The live link can be found here [Battleships PRO]()
+The live link can be found here [Battleships PRO](https://battleships-pro-c36fcd97acc4.herokuapp.com/)
 
 ## How to Play
 - Battleship pro is based on the classic pen-and-paper game. You can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game))
@@ -13,7 +13,7 @@ The live link can be found here [Battleships PRO]()
 - player's goal is to destroy computer's Fleet, same is the Goal of computer
 - Who destroyes the opponent's fleet first, is winner of the Game
 
-![Responsice Mockup](assets/images/amiresponsive.png)
+![Responsice Mockup](Images/responsive.png)
 
 
 
@@ -73,7 +73,16 @@ The live link can be found here [Battleships PRO]()
 ## Deployment
 
 
-The live link can be found here [Battleships PRO]()
+The live link can be found here [Battleships PRO](https://battleships-pro-c36fcd97acc4.herokuapp.com/)
+- The Game is  deployed to heroku, it enables users to place the game without having an understanding of back end languages.
+- To deploy this project I followed these steps:
+ - Add \n to all inputs in run.py file
+ - pip freeze requirements (I did not have anything to    add to this file as I did not install any packages)
+ - Login to my heroku account
+ - Create an app for this project in heruoku
+ - Add buildpacks on heroku of python and node.js as these are needed for the project to work when deployed, Python needed to be the first build pack, then node.js.
+ Then go to the deploy section, connect heroku to my github account.
+ - Deploy Branch
 
 
 ## Credits 
@@ -83,6 +92,10 @@ The live link can be found here [Battleships PRO]()
 ### Content 
 
 - throughout the making, got a lots of guidance from [W3scools](https://www.w3schools.com/) and [youtube](https://www.youtube.com/) Tutorials 
+
+### Acknowledgments
+
+Thanks to my Mentor Antonio Rodriguez who inspired me with his positive and responsible attitude. He helped me throughout the project, pointed out Bugs, and gave me useful tips to finalize the project.
 
 
 
