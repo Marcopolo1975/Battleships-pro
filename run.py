@@ -19,9 +19,6 @@ BBBBB   A     A    T       T    LLLL    EEEE   SSSS    H   H  III  P      SSSS
     ''')
 
 
-start()
-
-
 # function to creat grid on Game Board
 def create_grid(size):
     grid = []
@@ -121,4 +118,6 @@ def play_battleship():
 
 
 # Start the game
-play_battleship()
+if __name__ == "__main__":
+    start()
+    play_battleship()
